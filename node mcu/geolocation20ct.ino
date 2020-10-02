@@ -10,7 +10,7 @@
 #include <ESP8266HTTPClient.h>
 
 #define FIREBASE_HOST "https://smart-purse-9d542.firebaseio.com/"
-#define FIREBASE_AUTH "Mc9XCOzzb5aunF2LzQkmkz9f2mMdoOd6hbHhMwAf"
+#define FIREBASE_AUTH "API KEY HERE"
 FirebaseData firebaseData;
 
 
@@ -287,7 +287,7 @@ void flocation()
   if (client.connect(Host,443))
   {
     Serial.println("Connected");
-    client.println("POST " + thisPage + "AIzaSyCwMP_mkzW66lye5P7fz7tQlyVmM47poJE" + " HTTP/1.1");
+    client.println("POST " + thisPage + "API KEY" + " HTTP/1.1");
     client.println("Host: " + (String)Host);
     client.println("User-Agent: NodeMCU (ESP32)");
     client.println("Content-Type: application/json");
