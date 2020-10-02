@@ -1,0 +1,463 @@
+<CanvasWidget1>:
+    name : "CanvasWidget1" 
+    canvas: 
+        Color: 
+            rgba: 0,0,0,1  
+
+        Rectangle:
+            pos: self.pos 
+            size: self.size
+
+<CanvasWidget2>:
+    name : "CanvasWidget2" 
+    canvas: 
+        Color: 
+            rgba: 0,0,0,1  
+
+        Rectangle:
+            pos: self.pos 
+            size: self.size
+            
+<CanvasWidget3>:
+    name : "CanvasWidget3" 
+    canvas: 
+        Color: 
+            rgba: 0,0,0,1  
+
+        Rectangle:
+            pos: self.pos 
+            size: self.size
+
+<CanvasWidget4>:
+    name : "CanvasWidget4" 
+    canvas: 
+        Color: 
+            rgba: 0,0,0,1  
+
+        Rectangle:
+            pos: self.pos 
+            size: self.size
+
+<CanvasWidget5>:
+    name : "CanvasWidget5" 
+    canvas: 
+        Color: 
+            rgba: 0,0,0,1  
+
+        Rectangle:
+            pos: self.pos 
+            size: self.size
+
+<CanvasWidget6>:
+    name : "CanvasWidget6" 
+    canvas: 
+        Color: 
+            rgba: 0,0,0,1  
+
+        Rectangle:
+            pos: self.pos 
+            size: self.size
+
+<CanvasWidget7>:
+    name : "CanvasWidget7" 
+    canvas: 
+        Color: 
+            rgba: 0,0,0,1  
+
+        Rectangle:
+            pos: self.pos 
+            size: self.size
+              
+       
+<EnterPreviousDate>:
+    date:date
+    name: "EnterPreviousDate"
+    
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    FloatLayout:
+        id:epd1
+    
+        Label:
+            text:"Enter Previous Month Date e.g. 27-09-2019"
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.3, "top":0.9}
+            size_hint: 0.35, 0.15
+                
+        TextInput:
+            id: date
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: False
+            pos_hint: {"x": 0.2 , "top":0.7}
+            size_hint: 0.6, 0.2
+
+        Button:
+            text: "Confirm"
+            background_color : 0,1,1,1
+            pos_hint:{"x":0.3,"y":0.2}
+            size_hint: 0.4, 0.15
+            font_size: (root.width**2 + root.height**2) / 13**4
+            on_release:
+                root.storeDate()
+
+
+<AllOptions>:
+    name:"AllOptions"
+
+    FloatLayout:
+        sizehint : 1,1
+
+        Button:
+            text:"Get Upcoming Date"
+            font_size: (root.width**2 + root.height**2) / 13**4
+            size_hint: 0.4, 0.15
+            pos_hint:{"x":0.3,"y":0.14}
+            on_release:
+                root.showdates()
+            
+        Button:
+            text:"Track health"
+            font_size: (root.width**2 + root.height**2) / 13**4
+            size_hint: 0.4, 0.15
+            pos_hint:{"x":0.3,"y":0.42}
+            on_release:
+                root.trackhealth()
+            
+        Button:
+            text:"Configure Purse"
+            font_size: (root.width**2 + root.height**2) / 13**4
+            size_hint: 0.4, 0.15
+            pos_hint:{"x":0.3,"y":0.70}
+            on_release:
+                root.configPurse()
+
+<CalendarScreen>:
+    name : "CalendarScreen"
+    date1 : date1
+    date2 : date2
+    date3 : date3
+    date4 : date4
+    date5 : date5
+
+    FloatLayout:
+        
+        Label:
+            text : "1st Month date"
+            size_hint: 0.4, 0.08
+            pos_hint:{"x":0.1,"y":0.92}
+        Label:
+            size_hint: 0.4, 0.08
+            pos_hint:{"x":0.5,"y":0.92}
+            id: date1
+        Label:
+            text : "2nd Month date"
+            size_hint: 0.4, 0.07
+            pos_hint:{"x":0.1,"y":0.79}   
+        Label:
+            size_hint: 0.4, 0.07
+            pos_hint:{"x":0.5,"y":0.79}
+            id : date2
+        Label:
+            text : "3rd Month date"
+            size_hint: 0.4, 0.07
+            pos_hint:{"x":0.1,"y":0.63}
+        Label:
+            size_hint: 0.4, 0.07
+            pos_hint:{"x":0.5,"y":0.63}
+            id : date3
+        Label:
+            text : "4th Month date"
+            size_hint: 0.4, 0.07
+            pos_hint:{"x":0.1,"y":0.47}
+        Label:
+            size_hint: 0.4, 0.07
+            pos_hint:{"x":0.5,"y":0.47}
+            id : date4
+        Label:
+            text : "5th Month date"
+            size_hint: 0.4, 0.07
+            pos_hint:{"x":0.1,"y":0.31}
+        Label:
+            size_hint: 0.4, 0.07
+            pos_hint:{"x":0.5,"y":0.31}
+            id : date5
+            
+        Button:
+            text : "<---- GET BACK "
+            size_hint: 0.4, 0.07
+            pos_hint:{"x":0.3,"y":0.15}
+            on_release:
+                root.get_back()
+            
+
+<Screen1>:
+    name : "Screen1"
+    f1 : MeanCycleLength
+    f2 : EstimatedDayofOvulation
+    f3 : LengthofLutealPhase
+    f4 : LengthofMenses 
+    
+    Label:
+        text: "Mean Cycle Length"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.81}
+        
+    TextInput:
+        id : MeanCycleLength
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.81}
+    
+    Label:
+        text: "Estimated Day of Ovulation"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.63}
+        
+    TextInput:
+        id: EstimatedDayofOvulation 
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.63}
+    
+    Label:
+        text : "Length of Luteal Phase"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.45}
+        
+    TextInput:
+        id : LengthofLutealPhase
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.45}
+    
+    Label:
+        text : "Length of Menses"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.27}
+        
+    TextInput:
+        id : LengthofMenses
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.27}
+        
+    Button:
+        text : "submit"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.3,"y":0.09}
+        on_release:
+            root.nextScreen2()
+ 
+<Screen2>:
+    name : "Screen2"
+    f5 : MensesScoreDayOne
+    f6 : MensesScoreDayTwo
+    f7 : MensesScoreDayThree
+    f8 : MensesScoreDayFour
+    Label:
+        text: "Menses Score Day One(0-5)"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.81}
+        
+    TextInput:
+        id : MensesScoreDayOne
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.81}
+    
+    Label:
+        text: "Menses Score Day Two(0-5)"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.63}
+        
+    TextInput:
+        id: MensesScoreDayTwo 
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.63}
+    
+    Label:
+        text : "Menses Score Day Three(0-5)"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.45}
+        
+    TextInput:
+        id : MensesScoreDayThree
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.45}
+    
+    Label:
+        text : "Menses Score Day Four(0-5)"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.27}
+        
+    TextInput:
+        id : MensesScoreDayFour
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.27}
+                
+    Button:
+        text : "submit"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.3,"y":0.09}
+        on_release:
+            root.nextScreen3()
+                    
+<Screen3>:
+    name : "Screen3"
+    f9 : MensesScoreDayFive
+    f10 : MensesScoreDaySix
+    f11 : MensesScoreDaySeven
+    f12 : MensesScoreDayEight
+    Label:
+        text: "Menses Score Day Five(0-5)"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.81}
+        
+    TextInput:
+        id : MensesScoreDayFive
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.81}
+    
+    Label:
+        text: "Menses Score Day Six(0-5)"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.63}
+        
+    TextInput:
+        id: MensesScoreDaySix
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.63}
+    
+    Label:
+        text : "Menses Score Day Seven(0-5)"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.45}
+        
+    TextInput:
+        id : MensesScoreDaySeven
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.45}
+    
+    Label:
+        text : "Menses Score Day Eight(0-5)"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.27}
+        
+    TextInput:
+        id : MensesScoreDayEight
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.27}
+                
+    Button:
+        text : "submit"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.3,"y":0.09}
+        on_release:
+            root.nextScreen4()
+                    
+<Screen4>:
+    name : "Screen4"
+    f13 : TotalMensesScore
+    f14 : Age
+    f15 : Height
+    f16 : Weight
+    Label:
+        text: "Total Menses Score"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.81}
+        
+    TextInput:
+        id : TotalMensesScore
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.81}
+    
+    Label:
+        text: "Age"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.63}
+        
+    TextInput:
+        id: Age
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.63}
+    
+    Label:
+        text : "Height"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.45}
+        
+    TextInput:
+        id : Height
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.45}
+    
+    Label:
+        text : "Weight"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.27}
+        
+    TextInput:
+        id : Weight
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.27}
+                
+    Button:
+        text : "submit"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.3,"y":0.09}
+        on_release:
+            root.submitData() 
+            
+<PurseConfiguration>:
+    name : "PurseConfiguration"
+    label_date : label_date
+    days : days
+    Label:
+        text : "Upcoming Date: "
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.81}
+    
+    Label:
+        id: label_date
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.5,"y":0.81}
+        
+    Label:
+        text: "Alert"
+        size_hint: 0.4, 0.09
+        pos_hint:{"x":0.1,"y":0.63}
+        
+    Switch:
+        id: switch
+        size_hint: 0.3, 0.09
+        pos_hint:{"x":0.5,"y":0.63}
+   
+    Spinner:
+        id: days
+        size_hint: 0.8, 0.09
+        pos_hint:{"x":0.1,"y":0.45}
+        text: "Select number of days for which you want to receive alerts prior to your upcoming date"                   #default value showed
+        values: ["1","2","3","4","5"]       
+        on_text:
+            root.on_spinner_select(days.text)
+  
+        
+    
+        
+         
+    
+    
+        
+        
+        
+                 
+        
+
+        
+
+
+        
+
+
+
+
