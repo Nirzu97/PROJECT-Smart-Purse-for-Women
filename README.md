@@ -5,3 +5,5 @@ Compact and smart purse for women with SOS Alarm, Live Location Tracking using G
 Technologies and concepts used: IoT, NoSQL Database, Geolocation, Bluetooth, Android application development, Deep learning
 
 Tools and libraries used: NodeMCU, Arduino IDE, Arduino C, Firebase, MIT App inventor, Google GeoLocation API, Keras, Kaggle notebook
+
+See this for detailed architecture and images of the developed prototype and app: (Smart Purse for Women)[Videos and images of a project result/final project report (1).pdf]
