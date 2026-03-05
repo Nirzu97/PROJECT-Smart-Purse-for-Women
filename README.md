@@ -6,4 +6,4 @@ Technologies and concepts used: IoT, NoSQL Database, Geolocation, Bluetooth, And
 
 Tools and libraries used: NodeMCU, Arduino IDE, Arduino C, Firebase, MIT App inventor, Google GeoLocation API, Keras, Kaggle notebook
 
-See this for detailed architecture and images of the developed prototype and app: (Smart Purse for Women)[https://github.com/Nirzu97/PROJECT-Smart-Purse-for-Women/blob/main/Videos%20and%20images%20of%20a%20project%20result/final%20project%20report%20(1).pdf]
+See this for detailed architecture and images of the developed prototype and app: (Smart Purse for Women)[https://github.com/Nirzu97/PROJECT-Smart-Purse-for-Women/blob/main/Videos%20and%20images%20of%20a%20project%20result/Smart%20Purse.pdf]
